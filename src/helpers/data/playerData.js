@@ -47,7 +47,14 @@ const updatePlayer = (uid, id, playerObj) => new Promise((resolve, reject) => {
     })).catch((error) => reject(error));
 });
 
+const deletePlayer = (uid, id) => new Promise((resolve, reject) => {
+  axios.delete(`${dbUrl}/players/${id}.json`)
+    .then(() => getPlayers(uid).then((playerArr) => resolve(playerArr)))
+    .catch((error) => reject(error));
+});
+
 export {
   getPlayers, getSinglePlayer,
-  addPlayer, updatePlayer
+  addPlayer, updatePlayer,
+  deletePlayer
 };
