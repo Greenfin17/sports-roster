@@ -21,7 +21,7 @@ const NavBar = () => {
           <Collapse isOpen={isOpen} navbar>
             <Nav className='mr-auto' navbar>
               <NavItem>
-                <Link className='nav-link' to='/players'>Players</Link>
+                <Link className='nav-link' to='/players'>Team Roster</Link>
               </NavItem>
             </Nav>
             <LogoutButton />
