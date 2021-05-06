@@ -60,6 +60,7 @@ const PlayerForm = ({
           <Input type='text' className='form-control' aria-describedby='Player First Name'
             name='first_name' value={singlePlayer.first_name || ''} onChange={handleInputChange}
             placeholder='Enter Player First Name' />
+          <Label for='first-name'>Player Last Name</Label>
           <Input type='text' className='form-control' aria-describedby='Player Last Name'
             name='last_name' value={singlePlayer.last_name || ''} onChange={handleInputChange}
             placeholder='Enter Player Last Name' />
