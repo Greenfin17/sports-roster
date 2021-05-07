@@ -8,3 +8,37 @@
   margin: auto;
   justify-content: center;
 }
+
+.players h2 {
+  margin: 10px 0 20px;
+  display: inline-block;
+}
+
+
+.players-header img.header-left {
+    margin-right: 20%;
+}
+
+.players-header img.header-right{
+    margin-left: 20%;
+}
+
+@media (max-width: 817px) {
+  .players-header img.header-left {
+      margin-right: 10%;
+  }
+
+  .players-header img.header-right{
+      margin-left: 10%;
+  }
+}
+
+@media (max-width: 817px) {
+  .players-header img.header-left {
+    display: none;
+  }
+
+  .players-header img.header-right{
+    display: none;
+  }
+}
