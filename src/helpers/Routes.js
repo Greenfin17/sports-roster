@@ -26,6 +26,7 @@ const Routes = ({
   players,
   setPlayers,
   user,
+  setUser,
   setTheme,
   icons,
   theme
@@ -63,8 +64,10 @@ const Routes = ({
           user={user}
           component={() => <ChooseTheme
             setTheme={setTheme}
-            icons={icons} /> }
-        />
+            icons={icons}
+            user={user}
+            setUser={setUser} /> }
+          />
         <Route path='*'
           component={NotFound}
         />
@@ -76,6 +79,7 @@ Routes.propTypes = {
   players: PropTypes.array,
   setPlayers: PropTypes.func,
   user: PropTypes.any,
+  setUser: PropTypes.func,
   setTheme: PropTypes.func,
   icons: PropTypes.array,
   theme: PropTypes.number

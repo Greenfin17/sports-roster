@@ -7,6 +7,7 @@ import { getPlayers } from '../helpers/data/playerData';
 import NavBar from '../components/NavBar';
 import LoginButton from '../components/buttons/LoginButton';
 import icons from '../helpers/data/icons';
+import { addUser, getUser } from '../helpers/data/userData';
 
 function App() {
   const [players, setPlayers] = useState([]);
@@ -20,9 +21,17 @@ function App() {
           fullName: authed.displayName,
           profileImage: authed.photoURL,
           uid: authed.uid,
-          username: authed.email.split('@')[0]
+          username: authed.email.split('@')[0],
+          team: 30
         };
         setUser(userInfoObj);
+        getUser(authed.uid).then((userResp) => {
+          if (userResp.length < 1) {
+            addUser(userInfoObj);
+          } else if (Number.isInteger(userResp[0].team)) {
+            setTheme(userResp[0].team);
+          }
+        });
         getPlayers(authed.uid).then((playerArr) => {
           setPlayers(playerArr);
         });
@@ -41,6 +50,7 @@ function App() {
           players={players}
           setPlayers={setPlayers}
           user={user}
+          setUser={setUser}
           setTheme={setTheme}
           icons={icons}
           theme={theme}
