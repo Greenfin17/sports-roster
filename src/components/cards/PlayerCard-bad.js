@@ -21,7 +21,6 @@ const PlayerCard = ({
   };
 
   return (
-  <>
     <Card className='player-card'>
       <CardImg top width="100%" src={imageUrl} alt="player image" />
         <CardBody>
@@ -30,7 +29,6 @@ const PlayerCard = ({
           <Button onClick={handleEditClick}>Button</Button>
         </CardBody>
     </Card>
-  <>
   );
 };
 
