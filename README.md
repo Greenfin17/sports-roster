@@ -6,7 +6,7 @@
 ## Site link
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4314a03e-5a63-4ee7-b491-960356d14f41/deploy-status)](https://app.netlify.com/sites/jm-sports-roster/deploys)
 
-https://jm-e-pet-tamagotchi.netlify.app/
+https://jm-sports-roster.netlify.app/
 
 ## User
 - The user is someone interested in the sport of football and in creating a team roster.
