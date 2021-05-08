@@ -31,6 +31,9 @@ const ChooseTheme = ({
     });
   };
 
+  // setUser is asynchronous,
+  // therefore we must wait until user state object 
+  // is updated before updating the user in firebase
   useEffect(() => {
     getUser(user.uid).then((userResp) => {
       if (user.id && userResp[0].id) {
