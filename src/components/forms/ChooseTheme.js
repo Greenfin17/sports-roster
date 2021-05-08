@@ -14,7 +14,6 @@ const ChooseTheme = ({ setTheme, icons }) => {
   const handleClick = (e, index) => {
     e.preventDefault();
     setTheme(index);
-    console.warn(index);
   };
 
   return (

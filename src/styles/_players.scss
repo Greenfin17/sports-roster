@@ -14,13 +14,16 @@
   display: inline-block;
 }
 
-
-.players-header img.header-left {
+.players-header {
+    
+  img.header-left {
     margin-right: 20%;
-}
+  }
 
-.players-header img.header-right{
+  img.header-right{
     margin-left: 20%;
+  }
+  margin-top: 30px;
 }
 
 @media (max-width: 817px) {

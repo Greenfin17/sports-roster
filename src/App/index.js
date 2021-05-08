@@ -11,7 +11,7 @@ import icons from '../helpers/data/icons';
 function App() {
   const [players, setPlayers] = useState([]);
   const [user, setUser] = useState(null);
-  const [theme, setTheme] = useState(0);
+  const [theme, setTheme] = useState(30);
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged((authed) => {
