@@ -22,5 +22,4 @@ https://jm-sports-roster.netlify.app/
 ![TeamRoster](https://user-images.githubusercontent.com/51683901/117528900-1fe72b00-af9a-11eb-9613-2fb4b47c261e.png)
 
 ## Loom Video
-https://www.loom.com/share/1a70bae2d3fc48c89b7f97b6d087346d
-  
+https://www.loom.com/share/b40ca6027d554099bd6fb7d45af81f43
