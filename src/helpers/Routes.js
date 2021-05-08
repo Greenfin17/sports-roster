@@ -5,6 +5,7 @@ import NotFound from '../views/NotFound';
 import Home from '../views/Home';
 import Players from '../views/Players';
 import PlayerForm from '../components/forms/PlayerForm';
+import ChooseTheme from '../components/forms/ChooseTheme';
 
 const PlayerRoute = ({ component: Component, user, ...rest }) => {
   // when we call this function in the return, it is looking for an argument. `props` here is taco.
@@ -24,7 +25,10 @@ PlayerRoute.propTypes = {
 const Routes = ({
   players,
   setPlayers,
-  user
+  user,
+  setTheme,
+  icons,
+  theme
 }) => (
     <div>
       <Switch>
@@ -35,7 +39,9 @@ const Routes = ({
           user={user}
           component={() => <Players players={players}
           setPlayers={setPlayers}
-          user={user} /> }
+          user={user}
+          icons={icons}
+          theme={theme} /> }
         />
         <PlayerRoute
           exact
@@ -49,7 +55,15 @@ const Routes = ({
           path='/edit-player/:id'
           user={user}
           component={() => <PlayerForm setPlayers={setPlayers}
-          user={user} /> }
+          user={user}
+          /> }
+        />
+        <PlayerRoute
+          path='/choose-theme'
+          user={user}
+          component={() => <ChooseTheme
+            setTheme={setTheme}
+            icons={icons} /> }
         />
         <Route path='*'
           component={NotFound}
@@ -61,7 +75,10 @@ const Routes = ({
 Routes.propTypes = {
   players: PropTypes.array,
   setPlayers: PropTypes.func,
-  user: PropTypes.any
+  user: PropTypes.any,
+  setTheme: PropTypes.func,
+  icons: PropTypes.array,
+  theme: PropTypes.number
 };
 
 export default Routes;

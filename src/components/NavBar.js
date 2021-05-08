@@ -11,7 +11,10 @@ import LogoutButton from './buttons/LogoutButton';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => setIsOpen(!isOpen);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <div>
@@ -22,6 +25,9 @@ const NavBar = () => {
             <Nav className='mr-auto' navbar>
               <NavItem>
                 <Link className='nav-link' to='/players'>Team Roster</Link>
+              </NavItem>
+              <NavItem>
+                <Link className='nav-link' to='/choose-theme'>Choose Theme</Link>
               </NavItem>
             </Nav>
             <LogoutButton />

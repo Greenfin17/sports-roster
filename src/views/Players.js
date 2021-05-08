@@ -6,10 +6,16 @@ import AddPlayerButton from '../components/buttons/AddPlayerButton';
 const Players = ({
   setPlayers,
   players,
-  user
+  user,
+  icons,
+  theme,
 }) => (
   <div className='players'>
-    <h2>Players</h2>
+    <div className='players-header'>
+      <img className='header-left' src={icons[theme].image} alt='team icon' />
+      <h2>Team Roster</h2>
+      <img className='header-right' src={icons[theme].image} alt='team icon' />
+    </div>
     <AddPlayerButton />
     <div className='player-card-container dflex '>
       { user && players.map((player, key) => <PlayerCard
@@ -30,7 +36,9 @@ const Players = ({
 Players.propTypes = {
   players: PropTypes.array,
   setPlayers: PropTypes.func,
-  user: PropTypes.any
+  user: PropTypes.any,
+  icons: PropTypes.array,
+  theme: PropTypes.number,
 };
 
 export default Players;
