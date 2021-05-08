@@ -16,7 +16,7 @@ https://jm-sports-roster.netlify.app/
 - The user can view all the players in their roster.
 - The user can update and delete the players in their roster.
 - The user is authenticated with Google and can view their own roster only.
-- The user can choose themeing by showing the team logo from any of the 32 NFL football teams. 
+- The user can choose theming by showing the team logo from any of the 32 NFL football teams. 
 
 ## Screenshot
 ![TeamRoster](https://user-images.githubusercontent.com/51683901/117528900-1fe72b00-af9a-11eb-9613-2fb4b47c261e.png)
