@@ -10,7 +10,7 @@ https://jm-sports-roster.netlify.app/
 
 ## User
 - The user is someone interested in the sport of football and in creating a team roster.
-- 
+
 ## Features
 - The user can add players to their roster, listing their position and adding a photo link.
 - The user can view all the players in their roster.
