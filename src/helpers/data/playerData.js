@@ -41,7 +41,7 @@ const addPlayer = (uid, playerObj) => new Promise((resolve, reject) => {
 });
 
 const updatePlayer = (uid, id, playerObj) => new Promise((resolve, reject) => {
-  axios.patch(`${dbUrl}/players/${id}.json`, playerObj)
+  axios.put(`${dbUrl}/players/${id}.json`, playerObj)
     .then(() => getPlayers(uid).then((playerArr) => {
       resolve(playerArr);
     })).catch((error) => reject(error));
